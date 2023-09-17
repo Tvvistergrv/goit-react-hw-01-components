@@ -1,18 +1,25 @@
-import friends from '../friends'
+import PropTypes from 'prop-types';
+import { Fragment } from 'react';
 
-export const FriendListItem = () => {
 
-    return (friends.map((friend)=> 
-        <li 
-        key={friend.id}
+
+export const FriendListItem = ({avatar, name, isOnline}) => {
+    return (
+        <Fragment>
+            <span className="status">{isOnline}</span>
+            <img className="avatar" src={avatar} alt="User avatar" width="48" />
+            <p className="name">{name}</p>
+        </Fragment>
         
-        className="item">
-            <span className="status">{friend.isOnline}</span>
-            <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
-            <p className="name">{friend.name}</p>
-        </li>
         
-        )
     )
+    
 }
 
+
+FriendListItem.propTypes={
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+
+}
