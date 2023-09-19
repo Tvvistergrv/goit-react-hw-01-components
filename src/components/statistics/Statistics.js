@@ -1,19 +1,29 @@
+import css from '../statistics/Statistics.module.css'
 import PropTypes from 'prop-types';
 
 
+
+
 export const Statistics = ({title, stats}) => {
+  const generateColor = () => {
+    const randomColor = Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, '0');
+    return `#${randomColor}`;
+  };
     return (
-<section className="statistics">
-  {title && <h2 className="title">{title}</h2>}
+<section className={css.statistics}>
+  {title && <h2 className={css.title}>{title}</h2>}
       
   <ul 
-    className="stat-list">
+    className={css.statList}>
     {stats.map(el => 
         <li 
         key={el.id}
-        className="item">
-      <span className="label">{el.label}</span>
-      <span className="percentage">{el.percentage}%</span>
+        className={css.item} style={{background:generateColor()}}>
+          
+      <span className={css.label}>{el.label}</span>
+      <span className={css.percentage}>{el.percentage} %</span>
     </li>
   )}
   </ul>
@@ -21,6 +31,10 @@ export const Statistics = ({title, stats}) => {
 </section>
     )
 };
+
+// {[styles.base, styles.clickable, styles.withIcon].join(' ')}
+
+
 
 
 Statistics.propTypes={

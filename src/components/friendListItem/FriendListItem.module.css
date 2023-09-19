@@ -1,0 +1,42 @@
+.status {
+    width: 1px;
+    height: 1px;
+    background-color: green;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    padding:5px;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;    
+}
+
+.statusRed {
+    width: 1px;
+    height: 1px;
+    background-color: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    padding:5px;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;    
+}
+
+.avatar {
+    border-color: #383636;
+    border-image: none;
+    border-radius: 20%;
+    border-style: solid;
+    border-width: 1px;
+    height: 60px;
+    width: 60px;
+    /* overflow: hidden; */
+}
+
+.name {
+    font: italic small-caps bold 18px/2 cursive;
+    margin-left: 10px;
+
+}

@@ -1,0 +1,29 @@
+.friendList {
+    padding: 0;
+    max-width: 400px;
+    margin: auto;
+    height: 100%;
+    text-align: center;
+    border: 50px solid rgb(245, 245, 245);
+    
+    
+
+}
+
+
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: 1px solid rgb(131, 130, 130);
+    margin-top: 5px;
+    box-shadow: 5px 2px 2px rgb(155, 155, 155);
+
+    
+}
+
+.item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} 
+    

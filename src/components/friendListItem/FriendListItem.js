@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
+import css from '../friendListItem/FriendListItem.module.css'
 
 
 
 export const FriendListItem = ({avatar, name, isOnline}) => {
+    const colorIsOnLine = isOnline ? css.status : css.statusRed;
     return (
         <Fragment>
-            <span className="status">{isOnline}</span>
-            <img className="avatar" src={avatar} alt="User avatar" width="48" />
-            <p className="name">{name}</p>
+            <span className={colorIsOnLine}>{isOnline}</span>
+            <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
+            <p className={css.name}>{name}</p>
         </Fragment>
         
         

@@ -1,0 +1,54 @@
+
+
+.statistics {
+    max-width: 400px;
+    border: 50px solid rgb(245, 245, 245);
+    margin: auto;
+}
+
+.title {
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    line-height: normal;
+}
+
+.statList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;   
+}
+
+.item {
+    width: 50%;
+
+    
+}
+
+.item>span {
+   display: flex;
+   padding: 10px;
+
+}
+
+.label {
+    margin: 10px;
+}
+
+.percentage {
+    margin: 10px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
